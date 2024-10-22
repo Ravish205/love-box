@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title id="titleWeb"></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/mystyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+      body {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center horizontally */
+            justify-content: flex-start; /* Align items at the top */
+            height: 100vh; /* Full height */
+            margin: 0; /* Remove default margin */
+        }
+    </style>
+</head>
+
+<body style="width: 100%; height: 100%;">
+    <div class="box">
+        <ul class="minbox">
+            <li id="min1"></li>
+            <li id="min2"></li>
+            <li id="min3"></li>
+            <li id="min4"></li>
+            <li id="min5"></li>
+            <li id="min6"></li>
+        </ul>
+        <ol class="maxbox">
+            <li id="max1"></li>
+            <li id="max2"></li>
+            <li id="max3"></li>
+            <li id="max4"></li>
+            <li id="max5"></li>
+            <li id="max6"></li>
+        </ol>
+    </div>
+    <audio id="myAudio" src="Hrudayama (mp3cut.net).mp3" preload="auto"></audio>
+    <script>
+        var audio = document.getElementById("myAudio");
+        audio.play().catch(function(error) {
+            console.log("Audio playback failed: " + error);
+        });
+    </script>
+    <script src="./config.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
