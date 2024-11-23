@@ -16,6 +16,9 @@
             height: 100vh; /* Full height */
             margin: 0; /* Remove default margin */
         }
+      .button-container{
+        margin-top: 20px;
+      }
     </style>
 </head>
 
@@ -38,12 +41,24 @@
             <li id="max6"></li>
         </ol>
     </div>
-    <audio id="myAudio" src="Hrudayama (mp3cut.net).mp3" preload="auto"  autoplay="autoplay" loop="loop"></audio>
+    <div class="button-container">
+        <button onclick="playSong('Hrudayama (mp3cut.net).mp3')">Play Song 1</button>
+        <button onclick="playSong('song2.mp3')">Play Song 2</button>
+        <button onclick="playSong('song3.mp3')">Play Song 3</button>
+    </div>
+    <audio id="myAudio" src="Hrudayama (mp3cut.net).mp3" preload="auto" autoplay="autoplay" loop="loop"></audio>
     <script>
         var audio = document.getElementById("myAudio");
         audio.play().catch(function(error) {
             console.log("Audio playback failed: " + error);
         });
+
+        function playSong(song) {
+            audio.src = song;
+            audio.play().catch(function(error) {
+                console.log("Audio playback failed: " + error);
+            });
+        }
     </script>
     <script src="./config.js"></script>
     <script src="./js/main.js"></script>
